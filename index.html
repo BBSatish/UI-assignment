@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Listing Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Product Listing</h1>
+    <input type="text" id="search-bar" placeholder="Search products...">
+  </header>
+  <main>
+    <div id="filters">
+      <label for="category-filter">Category:</label>
+      <select id="category-filter">
+        <option value="all">All</option>
+        <!-- Categories will be dynamically populated here -->
+      </select>
+      
+      <label for="price-filter">Price Range:</label>
+      <select id="price-filter">
+        <option value="all">All</option>
+        <option value="0-50">$0 - $50</option>
+        <option value="50-100">$50 - $100</option>
+        <option value="100-200">$100 - $200</option>
+        <option value="200-500">$200 - $500</option>
+        <option value="500">$500+</option>
+      </select>
+    </div>
+    <div id="product-list">
+      <!-- Products will be displayed here -->
+    </div>
+    <button id="load-more">Load More</button>
+  </main>
+  <footer>
+    <p>&copy; 2024 Your Company</p>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
