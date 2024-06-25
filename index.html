@@ -4,39 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Listing Page</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Product Listing</h1>
-    <input type="text" id="search-bar" placeholder="Search products...">
+    <h1>Product Listing Page</h1>
   </header>
   <main>
-    <div id="filters">
-      <label for="category-filter">Category:</label>
-      <select id="category-filter">
-        <option value="all">All</option>
-        <!-- Categories will be dynamically populated here -->
-      </select>
-      
-      <label for="price-filter">Price Range:</label>
-      <select id="price-filter">
-        <option value="all">All</option>
-        <option value="0-50">$0 - $50</option>
-        <option value="50-100">$50 - $100</option>
-        <option value="100-200">$100 - $200</option>
-        <option value="200-500">$200 - $500</option>
-        <option value="500">$500+</option>
-      </select>
+    <input type="text" id="search-bar" placeholder="Search for products...">
+
+    <div id="filters" class="filter-row">
+      <div class="filter-group">
+        <label for="category-filter">Category:</label>
+        <select id="category-filter">
+          <option value="all">All</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="price-filter">Price Range:</label>
+        <select id="price-filter">
+          <option value="all">All</option>
+          <option value="0-50">$0 - $50</option>
+          <option value="50-100">$50 - $100</option>
+          <option value="100-200">$100 - $200</option>
+          <option value="200-500">$200 - $500</option>
+          <option value="500">$500+</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="sort-filter">Sort By:</label>
+        <select id="sort-filter">
+          <option value="none">None</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="name-asc">Name: A to Z</option>
+          <option value="name-desc">Name: Z to A</option>
+        </select>
+      </div>
     </div>
+
     <div id="product-list">
       <!-- Products will be displayed here -->
     </div>
+
     <button id="load-more">Load More</button>
   </main>
   <footer>
-    <p>&copy; 2024 Your Company</p>
+    <p>&copy; 2024 Product Listing Page</p>
   </footer>
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
